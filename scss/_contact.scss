@@ -1,0 +1,26 @@
+.contact {
+    height: 100%;
+    padding-top: 20vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../img/model-1.jpg') center;
+    background-size: cover;
+
+    h2{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        font-size: 1.5rem;
+    }
+    .social-icons {
+        position: initial;
+        margin-top: 6rem;
+        font-size: 2rem;
+    }
+}
