@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exchange registry and calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="row greet">
+            <div class="col">
+                <h1>Greetings!</h1>
+            </div>
+        </div>
+        <div class="row intro">
+            <div class="col">
+                <h3>This is an exchange registry and calculator. Which function you want to use?</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col 12 history hidden">
+                <form name="formhist">
+                    <label>Please insert the date you want to check</label><br>
+                    <input type="date" name="dateToCheck"/><br>
+                    <label>Select base currency</label><br>
+                    <select name="base" id="baseHist">
+                        <option value="USD">Dólares</option>
+                        <option value="ARS">Peso argentino</option>
+                        <option value="CAD">Dolar canadiense</option>
+                        <option value="GBP">Libra británica</option>
+                        <option value="EUR">Euro</option>
+                        <option value="AUD">Dólar australiano</option>
+                        <option value="BRL">Real brasilero</option>
+                        <option value="MXN">Peso mexicano</option>
+                    </select><br>
+                    <submit type="button" class="button-hist">Search</submit><br>
+                </form>
+                <h4 class="displayhist"></h3>
+                <div class="response history hidden">
+                <h4 class="displayresponse"></h3>
+                <ul class="historylist"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col 12 calculator hidden">
+                <form name="formcalc">
+                    <label>Please insert quantity and select the currencies</label><br>
+                    <input type="number" name="quantity" placeholder="Quantity" /><br>
+                    <label>Select the base currency</label><br>
+                    <select name="ratesFrom" id="ratesFrom"><br>
+                        <option value="USD">Dólares</option>
+                        <option value="ARS">Peso argentino</option>
+                        <option value="CAD">Dolar Canadiense</option>
+                        <option value="GBP">Libra británica</option>
+                        <option value="EUR">Euro</option>
+                        <option value="AUD">Dólar australiano</option>
+                        <option value="BRL">Real brasilero</option>
+                        <option value="MXN">Peso mexicano</option>
+                    </select><br>
+                    <label>Select the currency you want to get</label><br>
+                    <select name="ratesTo" id="ratesTo">
+                        <option value="USD">Dólares</option>
+                        <option value="CAD">Dolar Canadiense</option>
+                        <option value="GBP">Libra británica</option>
+                        <option value="EUR">Euro</option>
+                        <option value="AUD">Dólar australiano</option>
+                        <option value="BRL">Real brasilero</option>
+                        <option value="MXN">Peso mexicano</option>
+                    </select><br>
+                    <h4 class="displaycalc"></h3>
+                    <submit type="button" class="button-calc">Calculate</submit>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col 6 history-toggle">
+                <h3>History</h3>
+            </div>
+            <div class="col 6 calculator-toggle">
+                <h3>Calculator</h3>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-bottom footer">
+    <p>This app was coded by Agustin Galaxie.
+        <a href="https://github.com/agustingalaxie"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/agustin-galeazzi-9081421bb/"><i class="bi bi-linkedin"></i></a>
+    </p>   
+    </div>
+    <script src='main.js'></script>
+</body>
+
+</html>
