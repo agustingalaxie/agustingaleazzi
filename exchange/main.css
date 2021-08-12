@@ -62,6 +62,7 @@ html {
 .button-calc,.button-hist {
     padding: 1em;
     font-size: 1.5em;
+    cursor: pointer;
 }
 label{
     margin-bottom: 0.5em;
