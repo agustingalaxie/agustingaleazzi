@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Memotest</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="row display" name="display">
+            <div class="col-10 visor">
+                <h1>¡Bienvenidx! ¡Vamos a ver qué tal está tu memoria!</h1>
+            </div>
+            <div class="col-2">
+                <button class="button">Estoy listx!</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="grilla-cuadros">
+        <div class="row">
+            <div class="col-3 cuadro" id="cuadro1">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro2">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro3">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 cuadro" id="cuadro4">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 cuadro" id="cuadro5">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro6">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro7">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro8">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 cuadro" id="cuadro9">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro10">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro11">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro12">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 cuadro" id="cuadro13">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro14">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro15">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 cuadro" id="cuadro16">
+                <div class="contenido">
+                    <div class="frente">
+                    </div>
+                    <div class="interior">
+                        <h4 class="oculto"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio id="audioClick" src="https://d3qhmae9zx9eb.cloudfront.net/foley/amzn_sfx_glass_on_table_01.mp3" type="mp3"/>
+        <audio id="audioVictoria" src="https://d3qhmae9zx9eb.cloudfront.net/musical/amzn_sfx_trumpet_bugle_04.mp3" type="mp3"/>
+
+        <script src='src/main.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+.body {
+    background-color: #ffe1cd;
+    height: 100vh;
+    font-family: 'Satisfy', cursive;
+  }
+.container{
+    margin-top: 1em;
+}
+.cuadro{
+    background-color: #ebffcd;
+    padding: 3em;
+    width: 3em;
+    border: 4px solid black;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    perspective: 1000px
+}
+.display{
+    padding: 2em;
+    border: 4px solid black;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fffacd;
+}
+.button{
+    padding: 1em;
+    border: 4px solid black;
+    border-radius: 3px;
+    font-size: 20px;
+}
+.button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contenido { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+.clickeado .contenido{
+    transform: rotateY(180deg);
+  }
+  
+.interior, .frente {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+.frente {
+    background-color: #ebffcd;
+    color: black;
+  }
+  
+.interior {
+    background-color: transparent;
+    color: #000;
+    transform: rotateY(180deg);
+  }
+
+ @media screen and (max-width: 780px) {
+    .button {
+      padding: 2em;
+      width: 2em;
+    }
+  }
