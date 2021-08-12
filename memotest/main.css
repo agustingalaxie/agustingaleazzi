@@ -10,7 +10,7 @@
 }
 .cuadro{
     background-color: #ebffcd;
-    padding: 3em;
+    padding: 4em;
     width: 3em;
     border: 4px solid black;
     border-radius: 3px;
@@ -36,7 +36,8 @@
 }
 
 .contenido { 
-    position: relative;
+    display: grid;
+    place-content: center;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -45,11 +46,10 @@
   }
   
 .clickeado .contenido{
-    transform: rotateY(180deg);
+    transform: rotateY(180deg);    
   }
   
 .interior, .frente {
-    position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
@@ -64,12 +64,14 @@
 .interior {
     background-color: transparent;
     color: #000;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg);    
   }
 
  @media screen and (max-width: 780px) {
     .button {
-      padding: 2em;
-      width: 2em;
+      font-size: 12px;
+    }
+    .cuadro{
+      height: 2em;
     }
   }
