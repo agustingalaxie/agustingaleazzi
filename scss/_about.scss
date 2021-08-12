@@ -56,6 +56,15 @@
 
 @media screen and (max-width: 800px) {
     .about__bio {
+        height: 95% !important;
+        img{
+            margin-top: 3em;
+        }
         height: 55%;
+    }
+    .studies {
+        &__study{
+        margin-bottom: 1em;
+        }
     }
 }

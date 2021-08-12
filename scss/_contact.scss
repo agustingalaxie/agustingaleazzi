@@ -24,3 +24,11 @@
         font-size: 2rem;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .contact {
+        .social-icons{
+            margin-top: 3rem;
+        }
+    }
+}

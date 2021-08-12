@@ -67,7 +67,14 @@
 
 @media screen and (max-width: 800px) {
   .about__bio {
+    height: 95% !important;
     height: 55%;
+  }
+  .about__bio img {
+    margin-top: 3em;
+  }
+  .studies__study {
+    margin-bottom: 1em;
   }
 }
 
@@ -100,6 +107,12 @@
 .home__name__last {
   color: #ED6A5A;
   font-weight: 750;
+}
+
+@media screen and (max-width: 800px) {
+  .home {
+    padding-top: 30vh;
+  }
 }
 
 .menu-btn {
@@ -260,11 +273,12 @@
 .projects {
   padding-bottom: 2rem;
   height: 100%;
+  width: 100%;
 }
 
 .projects__title {
   height: 30vh;
-  width: 100;
+  width: 100%;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -373,6 +387,12 @@
   color: #E6EBE0;
 }
 
+@media screen and (max-width: 800px) {
+  .projects__items {
+    width: 40vh;
+  }
+}
+
 .contact {
   height: 100%;
   padding-top: 20vh;
@@ -409,6 +429,12 @@
   position: initial;
   margin-top: 6rem;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact .social-icons {
+    margin-top: 3rem;
+  }
 }
 
 body {
