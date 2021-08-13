@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Exchange registry and calculator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href="exchangecss/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
@@ -21,8 +21,12 @@
             </div>
         </div>
         <div class="row intro">
+
             <div class="col">
                 <h3>This is an exchange registry and calculator. Which function you want to use?</h3>
+                <h6>The api's free plan does not support the kind of request that work on github pages,
+                    so right now the app does not work. Feel free to copy the repository and try it on your browser.
+                </h6>
             </div>
         </div>
         <div class="row">
@@ -32,14 +36,13 @@
                     <input type="date" name="dateToCheck"/><br>
                     <label>Select base currency</label><br>
                     <select name="base" id="baseHist">
-                        <option value="USD">Dólares</option>
-                        <option value="ARS">Peso argentino</option>
-                        <option value="CAD">Dolar canadiense</option>
-                        <option value="GBP">Libra británica</option>
+                        <option value="USD">Dollar</option>
+                        <option value="ARS">Argentine peso</option>
+                        <option value="CAD">Canadian dollar</option>
+                        <option value="GBP">Pounds</option>
                         <option value="EUR">Euro</option>
-                        <option value="AUD">Dólar australiano</option>
-                        <option value="BRL">Real brasilero</option>
-                        <option value="MXN">Peso mexicano</option>
+                        <option value="AUD">Australian dollar</option>
+                        <option value="MXN">Mexican peso</option>
                     </select><br>
                     <submit type="button" class="button-hist">Search</submit><br>
                 </form>
@@ -57,24 +60,23 @@
                     <input type="number" name="quantity" placeholder="Quantity" /><br>
                     <label>Select the base currency</label><br>
                     <select name="ratesFrom" id="ratesFrom"><br>
-                        <option value="USD">Dólares</option>
-                        <option value="ARS">Peso argentino</option>
-                        <option value="CAD">Dolar Canadiense</option>
-                        <option value="GBP">Libra británica</option>
+                        <option value="USD">Dollar</option>
+                        <option value="ARS">Argentine peso</option>
+                        <option value="CAD">Canadian dollar</option>
+                        <option value="GBP">Pounds</option>
                         <option value="EUR">Euro</option>
-                        <option value="AUD">Dólar australiano</option>
-                        <option value="BRL">Real brasilero</option>
-                        <option value="MXN">Peso mexicano</option>
+                        <option value="AUD">Australian dollar</option>
+                        <option value="MXN">Mexican peso</option>
                     </select><br>
                     <label>Select the currency you want to get</label><br>
                     <select name="ratesTo" id="ratesTo">
-                        <option value="USD">Dólares</option>
-                        <option value="CAD">Dolar Canadiense</option>
-                        <option value="GBP">Libra británica</option>
+                        <option value="USD">Dollar</option>
+                        <option value="ARS">Argentine peso</option>
+                        <option value="CAD">Canadian dollar</option>
+                        <option value="GBP">Pounds</option>
                         <option value="EUR">Euro</option>
-                        <option value="AUD">Dólar australiano</option>
-                        <option value="BRL">Real brasilero</option>
-                        <option value="MXN">Peso mexicano</option>
+                        <option value="AUD">Australian dollar</option>
+                        <option value="MXN">Mexican peso</option>
                     </select><br>
                     <h4 class="displaycalc"></h3>
                     <submit type="button" class="button-calc">Calculate</submit>
