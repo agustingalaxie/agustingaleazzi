@@ -1,3 +1,9 @@
+.main-contact{
+    background: url('../img/model-1.jpg') center;
+    background-size: cover;
+    z-index: -2;
+    position: relative;
+}
 .contact {
     height: 100%;
     padding-top: 20vh;
@@ -5,9 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('../img/model-1.jpg') center;
-    background-size: cover;
-
+    z-index: 1;
     h2{
         font-size: 3rem;
         margin-bottom: 2rem;

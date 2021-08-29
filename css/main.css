@@ -85,6 +85,13 @@
   padding: 0;
 }
 
+.main-home {
+  background: url("../img/model-1.jpg") center;
+  background-size: cover;
+  z-index: -2;
+  position: relative;
+}
+
 .home {
   height: 100%;
   padding-top: 40vh;
@@ -93,8 +100,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: url("../img/model-1.jpg") center;
-  background-size: cover;
+  z-index: 1;
 }
 
 .home__name {
@@ -393,6 +399,13 @@
   }
 }
 
+.main-contact {
+  background: url("../img/model-1.jpg") center;
+  background-size: cover;
+  z-index: -2;
+  position: relative;
+}
+
 .contact {
   height: 100%;
   padding-top: 20vh;
@@ -407,8 +420,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("../img/model-1.jpg") center;
-  background-size: cover;
+  z-index: 1;
 }
 
 .contact h2 {
@@ -494,5 +506,12 @@ main footer {
   text-align: right;
   padding: 1rem;
   color: #E6EBE0;
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */
