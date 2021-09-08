@@ -2,20 +2,32 @@
     background: url('../img/model-1.jpg') center;
     background-size: cover;
     z-index: -2;
-    position: relative;
+    //position: relative;
 }
 .contact {
-    height: 100%;
-    padding-top: 20vh;
+
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 1;
+}
+.info{
+    height: 40%;
+    margin-top: 20vh;
+    padding: 3em;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5rem;
+    background-color: rgba($primary-color, 0.8);
+    border: 3px solid $secondary-color;
+    border-radius: 3%;
     h2{
         font-size: 3rem;
         margin-bottom: 2rem;
-    }
+    }    
     &__list {
         display: grid;
         grid-template-columns: 1fr;
@@ -26,6 +38,17 @@
         position: initial;
         margin-top: 6rem;
         font-size: 2rem;
+        bottom: 1rem;
+        left: 1rem;
+
+        cursor: pointer;
+        a {
+            padding: 0.4rem;
+            @include transition-ease;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
     }
 }
 

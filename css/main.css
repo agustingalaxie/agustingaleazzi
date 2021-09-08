@@ -330,20 +330,21 @@
   margin: 0.3rem 0;
 }
 
-.projects__item {
+.projects__items__item {
   position: relative;
   width: 100%;
   background: #45404f;
   padding: 0.4rem;
   border-bottom: 3px solid #ED6A5A;
   cursor: pointer;
+  margin-bottom: 3rem;
 }
 
-.projects__item img {
+.projects__items__item img {
   width: 100%;
 }
 
-.projects__item::after {
+.projects__items__item::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -356,14 +357,18 @@
   transition: all 0.5s ease-in-out;
 }
 
-.projects__item:hover::after {
+.projects__items__item:hover::after {
   top: 0;
   height: 100%;
   opacity: 0.9;
 }
 
-.projects__item:hover .projects__btn {
+.projects__items__item:hover .projects__btn {
   opacity: 1;
+}
+
+.projects__items__item:last-child {
+  margin-bottom: 4rem;
 }
 
 .projects__btns {
@@ -403,12 +408,9 @@
   background: url("../img/model-1.jpg") center;
   background-size: cover;
   z-index: -2;
-  position: relative;
 }
 
 .contact {
-  height: 100%;
-  padding-top: 20vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -423,12 +425,33 @@
   z-index: 1;
 }
 
-.contact h2 {
+.info {
+  height: 40%;
+  margin-top: 20vh;
+  padding: 3em;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5rem;
+  background-color: rgba(93, 87, 107, 0.8);
+  border: 3px solid #ED6A5A;
+  border-radius: 3%;
+}
+
+.info h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
 
-.contact__list {
+.info__list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -437,10 +460,23 @@
   font-size: 1.5rem;
 }
 
-.contact .social-icons {
+.info .social-icons {
   position: initial;
   margin-top: 6rem;
   font-size: 2rem;
+  bottom: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+
+.info .social-icons a {
+  padding: 0.4rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.info .social-icons a:hover {
+  color: #ED6A5A;
 }
 
 @media screen and (max-width: 800px) {
@@ -477,15 +513,34 @@ header {
   padding: 2rem;
 }
 
+/*main {
+    height: 100%;
+    width: 100%;
+    .social-icons {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 22;
+
+        a {
+            padding: 0.4rem;
+            @include transition-ease;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }*/
 main {
   height: 100%;
   width: 100%;
 }
 
 main .social-icons {
-  position: fixed;
   bottom: 1rem;
   left: 1rem;
+  cursor: pointer;
+  z-index: 99;
+  position: fixed;
 }
 
 main .social-icons a {
@@ -498,7 +553,7 @@ main .social-icons a:hover {
   color: #ED6A5A;
 }
 
-main footer {
+footer {
   font-size: 1rem;
   position: fixed;
   bottom: 0.4rem;
@@ -512,6 +567,6 @@ main footer {
   height: 100vh;
   width: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
 }
 /*# sourceMappingURL=main.css.map */

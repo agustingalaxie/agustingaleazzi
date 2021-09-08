@@ -34,13 +34,14 @@ header {
     padding: 2rem;   
 }
 
-main {
+/*main {
     height: 100%;
     width: 100%;
     .social-icons {
         position: fixed;
         bottom: 1rem;
         left: 1rem;
+        z-index: 22;
 
         a {
             padding: 0.4rem;
@@ -49,8 +50,29 @@ main {
                 color: $secondary-color;
             }
         }
-    }
-    footer {
+    }*/
+    main {
+        height: 100%;
+        width: 100%;
+
+        .social-icons {
+          bottom: 1rem;
+          left: 1rem;
+          cursor: pointer;
+          z-index: 99;
+            position: fixed;
+          a {
+            padding: 0.4rem;
+            @include transition-ease;
+      
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+      
+      footer {
         font-size: 1rem;
         position: fixed;
         bottom: 0.4rem;
@@ -58,11 +80,10 @@ main {
         text-align: right;
         padding: 1rem;
         color: set-text-color($primary-color);
-    }
-}
+      }
 #particles-js{
     height: 100vh;
     width: 100%;
-    position:fixed;
-    z-index: -1;
+    position: fixed;
+    z-index: -2;
 }

@@ -40,7 +40,7 @@
         h6 {
             margin: 0.3rem 0;   
         }
-    }
+    
     &__item {
         position: relative;
         width: 100%;
@@ -48,6 +48,7 @@
         padding: 0.4rem;
         border-bottom: 3px solid $secondary-color;
         cursor: pointer;
+        margin-bottom: 3rem;
         img{
             width: 100%;
         }
@@ -72,7 +73,11 @@
                 opacity: 1;
             }
         }
+        &:last-child{
+            margin-bottom: 4rem;
+        }
     }
+}
     &__btns{
         position: absolute;
         top: 0;
