@@ -1,0 +1,119 @@
+.header {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+    background: linear-gradient(to top, rgba($secondary-color, 0.9),
+            (rgba($secondary-color, 0.8))),
+        url("/imgs/foto-home-5.jpg");
+    background-size: cover;
+    height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &__hat {
+
+        &__shards {
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            &__1 {
+                background-color:$secondary-color;
+                position: absolute;
+                width: 1500px;
+                height: 180vh;
+                rotate: 45deg;
+                z-index: 1;
+                border: 1px solid black;
+                opacity: 0.6;
+            }
+
+            &__2 {
+                background-color: $primary-color;
+                width: 1800px;
+                height: 400vh;
+                rotate: -135deg;
+                z-index: 1;
+                border: 1px solid black;
+                opacity: 0.6;
+            }
+
+            &__3 {
+                background-color: $terciary-color;
+                width: 800px;
+                height: 1200vh;
+                rotate: -200deg;
+                right: 0rem !important;
+                z-index: 1;
+                border: 1px solid black;
+                opacity: 0.6;
+            }
+
+        }
+
+        /**/
+        &__logo__container {
+            margin-left: 0;
+            z-index: 2;
+            position: relative;
+        }
+
+        &__title {
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 900;
+            text-align: center;
+            bottom: 3em;
+            z-index: 2;
+        }
+
+        &__subtitle {
+            font-weight: 900;
+            color: white;
+
+            bottom: 1.5em;
+            z-index: 2;
+        }
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}

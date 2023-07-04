@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+@mixin mediaMaxH($height) {
+  @media screen and (max-height: $height) {
+    @content;
+  }
+}
+
+@mixin mediaMaxW($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+$bgImage: url('/imgs/PERAL-3-1024x724.png') center center no-repeat;
+$showDelay: 350ms;
+$textShowDelay: $showDelay + 1000ms;
+$topSpeed: 650ms;
+$bot-TextSpeed: 1000ms;
+$contSpeed: 1400ms;
+
+$skewColor: rgba(0, 0, 0, .4);
+$slide1TopTextClr: #08a3f0;
+$slide2TopTextClr: #06486b;
+$slide3TopTextClr: #08a3f0;
+$slide4TopTextClr: #08a3f0;
+$slideBotTextClr: #dde8e9;
+
+body {
+  font-family: 'EXO', sans-serif;
+  font-weight: 900 !important;
+}
+
+.con {
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  position: relative;
+  height: 100vh;
+  background: $bgImage;
+  background-size: cover;
+  overflow: hidden;
+  //z-index: -1;
+
+  //////////// Slide General /////////////
+  &__slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+
+    &-h {
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+
+      font: {
+        size: 60px;
+        weight: bold;
+        family: 'EXO', sans-serif;
+      }
+    }
+
+    &-top,
+    &-bot {
+      position: absolute;
+      background: $skewColor;
+    }
+
+    &-top {
+      top: -200px;
+      left: -835px;
+      height: 1235px;
+      width: 550px;
+      transform: rotate(25deg);
+      transition: transform $topSpeed $bot-TextSpeed;
+
+      &-inner {
+        position: fixed;
+        top: -59px;
+        right: -175px;
+        width: 100%;
+        height: 500px;
+        transform: rotate(20deg);
+        overflow: hidden;
+
+        &-text {
+          position: absolute;
+          right: 21px;
+          top: 649px;
+          transform: rotate(-45deg);
+          transition: transform $bot-TextSpeed;
+        }
+      }
+    }
+
+    &-bot {
+      top: -50px;
+      left: -884px;
+      width: 700px;
+      height: 1700px;
+      transform: rotate(-45deg);
+      overflow: hidden;
+      transition: transform $bot-TextSpeed $bot-TextSpeed + 100ms;
+
+      &-text {
+        position: absolute;
+        right: -416px;
+        top: 454px;
+        transform: rotate(45deg);
+        transition: transform $bot-TextSpeed;
+      }
+
+      &-text3 {
+        position: absolute;
+        right: -451px;
+        top: 419px;
+        transform: rotate(45deg);
+        transition: transform $bot-TextSpeed;
+      }
+
+      &-text4 {
+        position: absolute;
+        right: -671px;
+        top: 7px !important;
+        transform: rotate(45deg);
+        transition: transform $bot-TextSpeed;
+      }
+
+    }
+  }
+
+  /////////////// Slide 1 //////////////
+  &__slide--1 {
+    &-top {
+      &-h {
+        text-shadow: 0 0 1px $slide1TopTextClr;
+        color: $slide1TopTextClr;
+      }
+    }
+
+    &-bot {
+      &-h {
+        text-shadow: 0 0 1px $slideBotTextClr;
+        color: $slideBotTextClr;
+      }
+    }
+
+    &-content {
+      position: absolute;
+      right: 300px;
+      top: 50%;
+      transform: translateY(-55%);
+      opacity: 0;
+      transition: transform $bot-TextSpeed, opacity $bot-TextSpeed;
+
+      @include mediaMaxW(1350px) {
+        right: 15%;
+      }
+
+      @include mediaMaxW(1160px) {
+        right: 5%;
+      }
+
+      &-logo {
+        fill: #e5e5e5;
+
+        @include mediaMaxH(730px) {
+          width: 300px;
+        }
+
+        @include mediaMaxW(1350px) {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  /////////// Slide Right /////////////
+  &__slide--right {
+    &-top {
+      left: initial;
+      right: -195px;
+      right: -780px;
+      transform: rotate(-25deg);
+      transition: transform $topSpeed $bot-TextSpeed;
+
+      &-inner {
+        top: -31px;
+        left: -249px;
+        transform: rotate(-20deg);
+        overflow: overflow;
+
+        &-text {
+          right: 10px;
+          top: 620px;
+          transform: rotate(45deg);
+          animation: initial;
+          transition: transform $bot-TextSpeed 0s;
+        }
+      }
+
+      &-h {
+        width: 450px;
+        text-shadow: 0 0 1px $slide2TopTextClr;
+        color: $slide2TopTextClr;
+      }
+    }
+
+    &-bot {
+      left: initial;
+      right: -84px;
+      right: -884px;
+      transform: rotate(45deg);
+      animation: initial;
+      overflow: hidden;
+      transition: transform $bot-TextSpeed $bot-TextSpeed + 100;
+
+      &-text {
+        left: -507px;
+        top: 134px;
+        transform: rotate(-45deg);
+        animation: initial;
+        transition: transform $bot-TextSpeed 0s;
+        //transition-delay: 0s;
+      }
+
+      &-h {
+        text-shadow: 0 0 1px $slideBotTextClr;
+        color: $slideBotTextClr;
+      }
+    }
+
+    &-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-95%, -45%);
+      opacity: 0;
+      transition: transform $contSpeed 0s, opacity $contSpeed 0s, z-index 0s 2.2s;
+      z-index: -9999;
+
+      &-image {
+        @include mediaMaxH(730px) {
+          width: 80%;
+        }
+
+        @include mediaMaxW(1366px) {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  ////////////// Slide 3 ////////////////
+  &__slide--3 {
+    &-top {
+      &-h {
+        text-shadow: 0 0 1px $slide3TopTextClr;
+        color: $slide3TopTextClr;
+      }
+    }
+
+    &-bot {
+      &-h {
+        text-shadow: 0 0 1px $slideBotTextClr;
+        color: $slideBotTextClr;
+      }
+    }
+
+    &-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-45%);
+      opacity: 0;
+      transition: transform $contSpeed 0s, opacity $contSpeed 0s, z-index 0s 2.2s;
+
+      @include mediaMaxW(1366px) {
+        left: 60%;
+      }
+
+      &-image {
+        width: 500px;
+
+        @include mediaMaxH(730px) {
+          width: 400px;
+        }
+
+        @include mediaMaxW(1366px) {
+          width: 400px;
+        }
+      }
+    }
+  }
+
+  ////////////// Slide 4 ////////////////
+  &__slide--4 {
+    &-top {
+      &-h {
+        &-link {
+          position: relative;
+          text-decoration: none;
+          text-shadow: 0 0 1px $slide4TopTextClr;
+          color: $slide4TopTextClr;
+        }
+      }
+    }
+
+    &-bot {
+      &-h {
+        &-link {
+          text-decoration: none;
+          text-shadow: 0 0 1px $slideBotTextClr;
+          color: $slideBotTextClr;
+          z-index: 20;
+        }
+      }
+    }
+  }
+
+  //////////////// Nav Sidebar //////////////
+  &__nav {
+    position: absolute;
+    // top: 50%;
+    // right: 2%;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    &-list {
+      list-style-type: none;
+    }
+
+    &-item {
+      display: inline-block;
+      position: relative;
+      margin-left: 8px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #e5e5e5;
+      cursor: pointer;
+
+      &:after {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0, 0);
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+        background: #e5e5e5;
+        transition: 300ms;
+        opacity: 0;
+        overflow: hidden;
+      }
+
+      &:hover:after {
+        transform: translate(-50%, -50%) scale(1, 1);
+        opacity: 1;
+      }
+    }
+
+    &-item--1 {
+      margin-left: 0;
+    }
+
+    &-scroll {
+      position: absolute;
+      top: 1px;
+      transform: rotate(-45deg);
+      width: 17px;
+      height: 17px;
+      border: 2px solid #e5e5e5;
+      border-right: transparent;
+      border-bottom: transparent;
+      cursor: pointer;
+      transition: 300ms;
+
+      &:hover {
+        transform: rotate(-45deg) scale(1.2, 1.2);
+      }
+
+      &--goup {
+        left: -20px;
+      }
+
+      &--godown {
+        transform: rotate(-225deg);
+        right: -20px;
+
+        &:hover {
+          transform: rotate(-225deg) scale(1.2, 1.2);
+        }
+      }
+    }
+  }
+}
+
+.nav-active {
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.active {
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  //////////// Slides Left /////////////
+  .active-slide-left-top {
+    transform: translate(640px, 0) rotate(25deg);
+    transition: transform $topSpeed cubic-bezier(0, 0, 0.21, 1.02);
+  }
+
+  .active-slide-left-bot {
+    transform: translateX(800px) rotate(-45deg);
+    transition: transform $bot-TextSpeed $showDelay;
+  }
+
+  .active-slide-left-content {
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: transform $bot-TextSpeed $textShowDelay, opacity $bot-TextSpeed $textShowDelay;
+  }
+
+  ///////////// Slides Right /////////////
+  .active-slide-right-top {
+    transform: translateX(-585px) rotate(-25deg);
+    transition: transform $topSpeed;
+  }
+
+  .active-slide-right-bot {
+    transform: translateX(-800px) rotate(45deg);
+    transition-delay: $showDelay;
+  }
+
+  .active-slide-right-content {
+    transform: translate(-95%, -50%);
+    opacity: 1;
+    z-index: 10;
+    transition: transform $contSpeed $textShowDelay, opacity $contSpeed $textShowDelay, z-index 0s 1s;
+  }
+
+  /////////// Slide 1 ////////////
+  .active-slide1-top-text {
+    transform: translate(75px, -282px) rotate(-45deg);
+    transition: transform $bot-TextSpeed $textShowDelay;
+  }
+
+  .active-slide1-bot-text {
+    transform: translate(-117px, 31px) rotate(45deg);
+    transition: transform $bot-TextSpeed $textShowDelay;
+  }
+
+  ////////////// Slide 2 /////////////
+  .active-slide2-top-text {
+    transform: translate(-43px, -219px) rotate(45deg);
+    transition-delay: $textShowDelay;
+  }
+
+  .active-slide2-bot-text {
+    transform: translate(127px, -116px) rotate(-45deg);
+    transition-delay: $textShowDelay;
+  }
+
+  ////////////// Slide 3 /////////////
+  .active-slide3-top-text {
+    transform: translate(54px, -241px) rotate(-45deg);
+    transition: transform $bot-TextSpeed $textShowDelay;
+  }
+
+  .active-slide3-bot-text {
+    transform: translate(-190px, 43px) rotate(45deg);
+    transition: transform $bot-TextSpeed $textShowDelay;
+  }
+
+  ////////////// Slide 4 /////////////
+  .active-slide4-top-text {
+    transform: translate(-55px, -231px) rotate(45deg);
+    transition: transform $bot-TextSpeed $textShowDelay;
+  }
+
+  .active-slide4-bot-text {
+    transform: translate(127px, -116px) rotate(-45deg);
+    transition: transform $bot-TextSpeed $textShowDelay;
+  }
+}
